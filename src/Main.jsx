@@ -1,15 +1,13 @@
-// index.jsx
-
 import React from 'react';
-import TextBox from './TextBox';
-import TodoList from './List';
+import InputArea from './view/InputArea';
+import TodoList from './view/List';
 
-var Model = require("./Model");
-var model = new Model();
+var TodoListModel = require("./model/TodoListModel");
+var model = new TodoListModel();
 
 React.render(
    <div>
-      <TextBox model={model} />
+      <InputArea model={model} />
       <TodoList model={model}/>
    </div>,
    document.body

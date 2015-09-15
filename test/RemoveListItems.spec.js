@@ -1,10 +1,10 @@
-var Model = require("Model");
-var Guid = require("Guid");
+var TodoListModel = require("model/TodoListModel");
+var Guid = require("common/Guid");
 
 describe("Remove List Items", function() {
    it("Remove One Item", function() {
       // Arrange
-      var model = new Model();
+      var model = new TodoListModel();
       var guid = Guid.create();
 
       // Act
@@ -18,7 +18,7 @@ describe("Remove List Items", function() {
 
    it("Remove Two of Three Items", function() {
       // Arrange
-      var model = new Model();
+      var model = new TodoListModel();
       var guid1 = Guid.create();
       var guid2 = Guid.create();
       var guid3 = Guid.create();
@@ -40,7 +40,7 @@ describe("Remove List Items", function() {
 
    it("Calls EventListener", function() {
       // Arrange
-      var model = new Model();
+      var model = new TodoListModel();
       var guid = Guid.create();
 
       var callbackFlag = false;

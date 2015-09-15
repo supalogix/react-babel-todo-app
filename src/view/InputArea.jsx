@@ -1,8 +1,8 @@
 import React from 'react';
 
-var Guid = require("./Guid");
+var Guid = require("common/Guid");
 
-class TextBox extends React.Component {
+class InputArea extends React.Component {
    constructor(props) {
       super(props);
 
@@ -35,17 +35,6 @@ class TextBox extends React.Component {
       this.model.addItem( 
          Guid.create(),
          itemName );
-   }
-
-   getGuid() {
-      function s4() {
-        return Math.floor((1 + Math.random()) * 0x10000)
-          .toString(16)
-          .substring(1);
-      }
-
-      return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
-        s4() + '-' + s4() + s4() + s4();
    }
 
    onClick() {
@@ -86,4 +75,4 @@ class TextBox extends React.Component {
    }
 }
 
-export default TextBox;
+export default InputArea;

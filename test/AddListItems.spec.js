@@ -1,10 +1,10 @@
-var Model = require("Model");
-var Guid = require("Guid");
+var TodoListModel = require("model/TodoListModel");
+var Guid = require("common/Guid");
 
 describe("Add ListItem", function() {
    it("Add One List Item", function() {
       // Arrange
-      var model = new Model();
+      var model = new TodoListModel();
       var guid = Guid.create();
 
       // Act
@@ -22,7 +22,7 @@ describe("Add ListItem", function() {
 
    it("Add Two List Items", function() {
       // Arrange
-      var model = new Model();
+      var model = new TodoListModel();
       var guid1 = Guid.create();
       var guid2 = Guid.create();
 
@@ -46,7 +46,7 @@ describe("Add ListItem", function() {
 
    it("Calls EventListener", function() {
       // Arrange
-      var model = new Model();
+      var model = new TodoListModel();
       var guid1 = Guid.create();
 
       var callbackFlag = false;
@@ -66,7 +66,7 @@ describe("Add ListItem", function() {
 
    it("EventListener contains event data", function() {
       // Arrange
-      var model = new Model();
+      var model = new TodoListModel();
       var guid1 = Guid.create();
 
       var callbackFlag = false;
