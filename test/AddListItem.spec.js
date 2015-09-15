@@ -91,10 +91,3 @@ describe("Add ListItem", function() {
    });
 
 });
-
-/**
-
-Add List Item
-Remove List Item
-
-*/
