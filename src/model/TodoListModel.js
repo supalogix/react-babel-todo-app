@@ -39,6 +39,5 @@ TodoListModel.prototype.addItemRemovedListener = function( callback ) {
    this.emitter.on("ITEM_REMOVED", callback);
 }
 
-
 module.exports = TodoListModel;
 

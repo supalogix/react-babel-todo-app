@@ -1,7 +1,7 @@
 var TodoListModel = require("model/TodoListModel");
 var Guid = require("common/Guid");
 
-describe("Add ListItem", function() {
+describe("Add List Items", function() {
    it("Add One List Item", function() {
       // Arrange
       var model = new TodoListModel();
@@ -44,7 +44,7 @@ describe("Add ListItem", function() {
       ]);
    });
 
-   it("Calls EventListener", function() {
+   it("Call Event Listener", function() {
       // Arrange
       var model = new TodoListModel();
       var guid1 = Guid.create();
@@ -64,7 +64,7 @@ describe("Add ListItem", function() {
       expect(callbackFlag).toBeTruthy();
    });
 
-   it("EventListener contains event data", function() {
+   it("Verify event data", function() {
       // Arrange
       var model = new TodoListModel();
       var guid1 = Guid.create();
