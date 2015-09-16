@@ -109,5 +109,4 @@ describe("Add List Items", function() {
       expect(callbackGuid).toEqual(guid1);
       expect(callbackName).toEqual("item 1");
    });
-
 });
