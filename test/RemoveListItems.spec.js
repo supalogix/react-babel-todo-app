@@ -59,7 +59,7 @@ describe("Remove List Items", function() {
          .toEqual("Item Removed");
    });
 
-   it("Calls EventListener", function() {
+   it("System throws ITEM_REMOVED event", function() {
       // Arrange
       var model = new TodoListModel();
       var guid = Guid.create();

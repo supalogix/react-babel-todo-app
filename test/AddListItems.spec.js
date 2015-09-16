@@ -64,7 +64,7 @@ describe("Add List Items", function() {
          .toEqual("Item Added");
    });
 
-   it("Call Event Listener", function() {
+   it("System throws ITEM_ADDED event", function() {
       // Arrange
       var model = new TodoListModel();
       var guid1 = Guid.create();
@@ -84,7 +84,7 @@ describe("Add List Items", function() {
       expect(callbackFlag).toBeTruthy();
    });
 
-   it("Verify event data", function() {
+   it("Verify that ITEM_ADDED event has the proper format", function() {
       // Arrange
       var model = new TodoListModel();
       var guid1 = Guid.create();
