@@ -1,8 +1,11 @@
 var TodoListModel = require("model/TodoListModel");
 var Guid = require("common/Guid");
 
-describe("Add List Items", function() {
-   it("Add One List Item", function() {
+// Use Case 1.0
+describe("UC 1.0: Add List Items", function() {
+
+   // Test Case 1.0.1
+   it("TC 1.0.1: Add One List Item", function() {
       // Arrange
       var model = new TodoListModel();
       var guid = Guid.create();
@@ -20,7 +23,8 @@ describe("Add List Items", function() {
       ]);
    });
 
-   it("Add Two List Items", function() {
+   // Test Case 1.0.2
+   it("TC 1.0.2: Add Two List Items", function() {
       // Arrange
       var model = new TodoListModel();
       var guid1 = Guid.create();
@@ -44,7 +48,8 @@ describe("Add List Items", function() {
       ]);
    });
 
-   it("System throws SHOW_MESSAGE Event", function() {
+   // Test Case 1.0.3
+   it("TC 1.0.3: System throws SHOW_MESSAGE Event", function() {
       // Arrange
       var model = new TodoListModel();
       var guid = Guid.create();
@@ -64,7 +69,8 @@ describe("Add List Items", function() {
          .toEqual("Item Added");
    });
 
-   it("System throws ITEM_ADDED event", function() {
+   // Test Case 1.0.4
+   it("TC 1.0.4: System throws ITEM_ADDED event", function() {
       // Arrange
       var model = new TodoListModel();
       var guid1 = Guid.create();
@@ -84,7 +90,8 @@ describe("Add List Items", function() {
       expect(callbackFlag).toBeTruthy();
    });
 
-   it("Verify that ITEM_ADDED event has the proper format", function() {
+   // Test Case 1.0.5
+   it("TC 1.0.5: Verify that ITEM_ADDED event has the proper format", function() {
       // Arrange
       var model = new TodoListModel();
       var guid1 = Guid.create();

@@ -1,8 +1,11 @@
 var TodoListModel = require("model/TodoListModel");
 var Guid = require("common/Guid");
 
-describe("Remove List Items", function() {
-   it("Remove One Item", function() {
+// Use Case 2.0
+describe("UC 2.0: Remove List Items", function() {
+
+   // Test Case 2.0.1
+   it("TC 2.0.1: Remove One Item", function() {
       // Arrange
       var model = new TodoListModel();
       var guid = Guid.create();
@@ -16,7 +19,8 @@ describe("Remove List Items", function() {
       expect( items.length ).toEqual( 0 );
    });
 
-   it("Remove Two of Three Items", function() {
+   // Test Case 2.0.2
+   it("TC 2.0.2: Remove Two of Three Items", function() {
       // Arrange
       var model = new TodoListModel();
       var guid1 = Guid.create();
@@ -38,7 +42,8 @@ describe("Remove List Items", function() {
       }]);
    });
 
-   it("System throws SHOW_MESSAGE Event", function() {
+   // Test Case 2.0.3
+   it("TC 2.0.3: System Throws SHOW_MESSAGE Event", function() {
       // Arrange
       var model = new TodoListModel();
       var guid = Guid.create();
@@ -59,7 +64,8 @@ describe("Remove List Items", function() {
          .toEqual("Item Removed");
    });
 
-   it("System throws ITEM_REMOVED event", function() {
+   // Test Case 2.0.4
+   it("TC 2.0.4: System Throws ITEM_REMOVED Event", function() {
       // Arrange
       var model = new TodoListModel();
       var guid = Guid.create();
