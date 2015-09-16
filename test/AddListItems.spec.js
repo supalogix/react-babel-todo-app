@@ -44,6 +44,26 @@ describe("Add List Items", function() {
       ]);
    });
 
+   it("System throws SHOW_MESSAGE Event", function() {
+      // Arrange
+      var model = new TodoListModel();
+      var guid = Guid.create();
+
+      var errorMessage = "";
+      var callback = function(e) {
+         errorMessage = e.message; 
+      };
+
+      model.addShowMessageListener( callback );
+
+      // Act
+      model.addItem( guid, "Item 1" );
+
+      // Assert
+      expect(errorMessage)
+         .toEqual("Item Added");
+   });
+
    it("Call Event Listener", function() {
       // Arrange
       var model = new TodoListModel();

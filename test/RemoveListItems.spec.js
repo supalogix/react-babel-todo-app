@@ -38,6 +38,27 @@ describe("Remove List Items", function() {
       }]);
    });
 
+   it("System throws SHOW_MESSAGE Event", function() {
+      // Arrange
+      var model = new TodoListModel();
+      var guid = Guid.create();
+
+      var errorMessage = "";
+      var callback = function(e) {
+         errorMessage = e.message; 
+      };
+
+      model.addShowMessageListener( callback );
+
+      // Act
+      model.addItem( guid, "Item 1" );
+      model.removeItem( guid );
+
+      // Assert
+      expect(errorMessage)
+         .toEqual("Item Removed");
+   });
+
    it("Calls EventListener", function() {
       // Arrange
       var model = new TodoListModel();
